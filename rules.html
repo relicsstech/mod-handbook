@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules - Relics Moderator Handbook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .rule-item {
+            transition: all 0.3s ease;
+        }
+        .rule-item:hover {
+            background-color: #1f2937;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #111827;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #60a5fa;
+            width: 60%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 py-4 px-6 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center space-x-4">
+            <div class="bg-blue-500 rounded-full w-10 h-10 flex items-center justify-center">
+                <i class="fas fa-book text-white text-xl"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold">Relics Tech Support</h1>
+                <p class="text-sm text-blue-400">Moderator handbook</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-home mr-2"></i> Home</a></li>
+                <li><a href="rules.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-gavel mr-2"></i> Rules</a></li>
+                <li><a href="punishments.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-balance-scale mr-2"></i> Punishments</a></li>
+                <li><a href="policies.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-file-alt mr-2"></i> Policies</a></li>
+                <li><a href="ranks.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-chess-knight mr-2"></i> Ranks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-blue-400 border-b border-blue-500 pb-2">Server Rules</h2>
+            <p class="text-lg mb-8">Click on any rule to view detailed examples of violations.</p>
+            
+            <div class="space-y-4">
+                <!-- Rule 1 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('No Spamming', 'Example: A user repeatedly sends the same message or multiple short messages in quick succession, flooding the chat.')">
+                    <h3 class="text-xl font-bold">1. No Spamming</h3>
+                </div>
+                
+                <!-- Rule 2 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Do not Harass people', 'Example: A user continuously targets another member with insults, threats, or derogatory remarks after being asked to stop.')">
+                    <h3 class="text-xl font-bold">2. Do not Harass people</h3>
+                </div>
+                
+                <!-- Rule 3 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Be respectful', 'Example: A user responds to a technical question with condescending remarks like "That\'s so obvious, why don\'t you know this already?"')">
+                    <h3 class="text-xl font-bold">3. Be respectful</h3>
+                </div>
+                
+                <!-- Rule 4 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Listen to staff', 'Example: A user ignores multiple warnings from moderators and continues arguing about a decision publicly instead of opening a ticket.')">
+                    <h3 class="text-xl font-bold">4. Listen to staff</h3>
+                </div>
+                
+                <!-- Rule 5 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Do not Advertise', 'Example: A user posts links to their personal YouTube channel or Discord server without permission or relevance to the conversation.')">
+                    <h3 class="text-xl font-bold">5. Do not Advertise</h3>
+                </div>
+                
+                <!-- Rule 6 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Do not troll', 'Example: A user purposefully gives incorrect technical advice knowing it will cause problems for the person following it.')">
+                    <h3 class="text-xl font-bold">6. Do not troll</h3>
+                </div>
+                
+                <!-- Rule 7 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Do not raid', 'Example: A group of users coordinate to join the server simultaneously and flood channels with disruptive messages.')">
+                    <h3 class="text-xl font-bold">7. Do not raid</h3>
+                </div>
+                
+                <!-- Rule 8 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Do not be toxic', 'Example: A user consistently responds to others with negativity, insults, or makes the environment unpleasant for others.')">
+                    <h3 class="text-xl font-bold">8. Do not be toxic</h3>
+                </div>
+                
+                <!-- Rule 9 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('No Suicidal Talk', 'Example: A user discusses self-harm methods or makes threats of suicide in public channels.')">
+                    <h3 class="text-xl font-bold">9. No Suicidal Talk</h3>
+                </div>
+                
+                <!-- Rule 10 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Only ping @--- + If it\'s a real emergency', 'Example: A user pings @Support for a non-urgent question that could have been asked in general chat.')">
+                    <h3 class="text-xl font-bold">10. Only ping @--- + If it's a real emergency</h3>
+                </div>
+                
+                <!-- Rule 11 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('No NSFW', 'Example: A user posts explicit images, links, or detailed descriptions of adult content in general channels.')">
+                    <h3 class="text-xl font-bold">11. No NSFW</h3>
+                </div>
+                
+                <!-- Rule 12 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('Do not Mini mod / Impersonate Staff', 'Example: A non-staff member tells another user "I\'m warning you, stop that or you\'ll be muted" without authority.')">
+                    <h3 class="text-xl font-bold">12. Do not Mini mod / Impersonate Staff</h3>
+                </div>
+                
+                <!-- Rule 13 -->
+                <div class="rule-item bg-gray-800 p-4 rounded-lg cursor-pointer" onclick="openModal('No Cyber-bullying', 'Example: A user creates a channel or group chat specifically to mock another member\'s appearance or technical knowledge.')">
+                    <h3 class="text-xl font-bold">13. No Cyber-bullying</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="ruleModal" class="modal">
+        <div class="modal-content">
+            <span class="float-right text-xl cursor-pointer" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-blue-400"></h3>
+            <p id="modalContent" class="text-lg"></p>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 py-6 px-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>Relics Tech Support Moderator Handbook - Last updated: July 2023</p>
+            <p class="text-sm text-gray-400 mt-2">For questions/concerns, contact Founders: Benoopi or Gliive, or Head of Staff: Ray</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(title, content) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalContent').innerText = content;
+            document.getElementById('ruleModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('ruleModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('ruleModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
