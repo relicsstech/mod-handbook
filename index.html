@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relics - Tech Support / PC Building Moderator Handbook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .rule-item {
+            transition: all 0.3s ease;
+        }
+        .rule-item:hover {
+            background-color: #1f2937;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #111827;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #60a5fa;
+            width: 60%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 py-4 px-6 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center space-x-4">
+            <div class="bg-blue-500 rounded-full w-10 h-10 flex items-center justify-center">
+                <i class="fas fa-book text-white text-xl"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold">Relics Tech Support</h1>
+                <p class="text-sm text-blue-400">Moderator handbook</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-home mr-2"></i> Home</a></li>
+                <li><a href="rules.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-gavel mr-2"></i> Rules</a></li>
+                <li><a href="punishments.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-balance-scale mr-2"></i> Punishments</a></li>
+                <li><a href="policies.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-file-alt mr-2"></i> Policies</a></li>
+                <li><a href="ranks.html" class="hover:text-blue-400 flex items-center"><i class="fas fa-chess-knight mr-2"></i> Ranks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-blue-400 border-b border-blue-500 pb-2">Welcome to Relics Moderator Handbook</h2>
+            <p class="text-lg mb-4">This handbook contains all the essential information you need as a moderator for Relics Tech Support community.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <a href="rules.html" class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-gavel text-blue-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">Server Rules</h3>
+                    </div>
+                    <p>Learn about all server rules with detailed examples of violations.</p>
+                </a>
+                <a href="punishments.html" class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-balance-scale text-blue-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">Punishments</h3>
+                    </div>
+                    <p>Understand appropriate actions for different rule violations.</p>
+                </a>
+                <a href="policies.html" class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-file-alt text-blue-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">Policies</h3>
+                    </div>
+                    <p>Review important staff policies and ethical guidelines.</p>
+                </a>
+                <a href="ranks.html" class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chess-knight text-blue-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">Ranks</h3>
+                    </div>
+                    <p>Explore different staff ranks and their responsibilities.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-6 px-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>Relics Tech Support Moderator Handbook - Last updated: October 2025</p>
+<p class="text-sm text-gray-400 mt-2">For questions/concerns, contact Founders: Benoopi or Gliive, or Head of Staff: Ray</p>
+        </div>
+    </footer>
+</body>
+</html>
